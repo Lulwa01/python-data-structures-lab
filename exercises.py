@@ -31,11 +31,11 @@ def combine_foods():
     meal = ''
 
     for food in foods:
-
-    # I didnt know how to do this 
+        meal += food + ' '
+    return meal
 
 # Call the function and print the result
-        print('Exercise 2:', combine_foods())
+print('Exercise 2:', combine_foods())
 
 
 
@@ -47,7 +47,7 @@ def combine_foods():
 def slice_foods():
     # your code here
     foods = ('Fries', 'Wedges', 'Curly Fries')
-    last_two_foods = slice(-2)
+    last_two_foods = foods[-2:]
     return last_two_foods
 
 # Call the function and print the result
@@ -69,8 +69,8 @@ def hometown_info():
         'population': '1M?',
     }
 
-    for city, country, population in hometown_info.items():
-        print(f"I was born in {city}, {country} - population of {population}") 
+    home_town_message = f"I was born in {home_town['city']}, {home_town['country']} - population of {home_town['population']}"
+    return home_town_message
 
 # Call the function and print the result
 print('Exercise 4:', hometown_info())
@@ -85,14 +85,16 @@ print('Exercise 4:', hometown_info())
 
 def list_home_town_items():
     # your code here
+    home_town = {
+        'city': 'Manama',
+        'country': 'Bahrain',
+        'population': '1M?',
+    }
     home_town_items = []
 
-    for key, val in home_town_items.items():
+    for key, val in home_town.items():
         home_town_items.append(f'{key} = {val}')
 
 
 # Call the function and print the result
 print('Exercise 5:', list_home_town_items())
-
-
-## I will refine my code and resubmit 
